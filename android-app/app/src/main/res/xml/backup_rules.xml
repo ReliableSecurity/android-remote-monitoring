@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Включить резервное копирование настроек приложения -->
+    <include domain="sharedpref" path="." />
+    
+    <!-- Исключить конфиденциальные данные -->
+    <exclude domain="sharedpref" path="RemoteMonitorPrefs.xml" />
+    <exclude domain="database" />
+    <exclude domain="file" path="." />
+    
+    <!-- Образовательное примечание -->
+    <!-- Исключаем все пользовательские данные для безопасности -->
+</full-backup-content>

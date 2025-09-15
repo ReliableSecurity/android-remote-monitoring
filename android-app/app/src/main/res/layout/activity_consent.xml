@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📋 СОГЛАШЕНИЕ О МОНИТОРИНГЕ"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Прокручиваемый текст согласия -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/text_consent_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="4dp" />
+
+    </ScrollView>
+
+    <!-- Чекбоксы согласия -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <CheckBox
+            android:id="@+id/checkbox_consent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✅ Я прочитал и понимаю все условия соглашения"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_educational"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎓 Я понимаю, что это образовательный проект"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_own_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📱 Я буду использовать это только на собственных устройствах"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_no_malicious"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚫 Я не буду использовать это во вредоносных целях"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+    <!-- Кнопки -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_decline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="❌ ОТКЛОНИТЬ"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_accept"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Отметьте все пункты"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@android:color/holo_green_light"
+            android:textColor="@android:color/white"
+            android:padding="16dp"
+            android:layout_marginStart="8dp"
+            android:enabled="false"
+            android:alpha="0.5" />
+
+    </LinearLayout>
+
+</LinearLayout>

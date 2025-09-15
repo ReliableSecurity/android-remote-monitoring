@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design 3 Color System -->
+    
+    <!-- Primary colors -->
+    <color name="md_theme_primary">#1976D2</color>
+    <color name="md_theme_on_primary">#FFFFFF</color>
+    <color name="md_theme_primary_container">#D1E4FF</color>
+    <color name="md_theme_on_primary_container">#001D36</color>
+    
+    <!-- Secondary colors -->
+    <color name="md_theme_secondary">#535F70</color>
+    <color name="md_theme_on_secondary">#FFFFFF</color>
+    <color name="md_theme_secondary_container">#D7E3F7</color>
+    <color name="md_theme_on_secondary_container">#101C2B</color>
+    
+    <!-- Tertiary colors -->
+    <color name="md_theme_tertiary">#6B5778</color>
+    <color name="md_theme_on_tertiary">#FFFFFF</color>
+    <color name="md_theme_tertiary_container">#F2DAFF</color>
+    <color name="md_theme_on_tertiary_container">#251431</color>
+    
+    <!-- Error colors -->
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_on_error">#FFFFFF</color>
+    <color name="md_theme_error_container">#FFDAD6</color>
+    <color name="md_theme_on_error_container">#410002</color>
+    
+    <!-- Surface colors -->
+    <color name="md_theme_surface">#FEFBFF</color>
+    <color name="md_theme_on_surface">#1A1B20</color>
+    <color name="md_theme_surface_variant">#DEE3EB</color>
+    <color name="md_theme_on_surface_variant">#42474E</color>
+    
+    <!-- Background -->
+    <color name="md_theme_background">#FEFBFF</color>
+    <color name="md_theme_on_background">#1A1B20</color>
+    
+    <!-- Outline -->
+    <color name="md_theme_outline">#73777F</color>
+    <color name="md_theme_outline_variant">#C2C7CF</color>
+    
+    <!-- Educational/Consent theme colors -->
+    <color name="consent_primary">#D32F2F</color>
+    <color name="consent_on_primary">#FFFFFF</color>
+    <color name="consent_secondary">#FF5722</color>
+    
+    <!-- Status colors for monitoring -->
+    <color name="status_connected">#4CAF50</color>
+    <color name="status_connecting">#FF9800</color>
+    <color name="status_disconnected">#9E9E9E</color>
+    <color name="status_error">#F44336</color>
+    
+    <!-- Security warning colors -->
+    <color name="warning_background">#FFF3E0</color>
+    <color name="warning_text">#E65100</color>
+    <color name="warning_border">#FF9800</color>
+    
+    <!-- Educational emphasis -->
+    <color name="educational_accent">#FF6F00</color>
+    <color name="educational_background">#FFFDE7</color>
+    
+    <!-- Dark theme colors (for night mode) -->
+    <color name="md_theme_primary_dark">#9CCAFF</color>
+    <color name="md_theme_on_primary_dark">#003258</color>
+    <color name="md_theme_primary_container_dark">#00497D</color>
+    <color name="md_theme_on_primary_container_dark">#D1E4FF</color>
+    
+    <color name="md_theme_surface_dark">#10131A</color>
+    <color name="md_theme_on_surface_dark">#E0E2EC</color>
+    <color name="md_theme_background_dark">#10131A</color>
+    <color name="md_theme_on_background_dark">#E0E2EC</color>
+</resources>

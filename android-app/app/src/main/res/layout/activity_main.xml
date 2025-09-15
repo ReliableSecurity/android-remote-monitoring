@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📱 Remote Monitor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚠️ ОБРАЗОВАТЕЛЬНЫЙ ПРОЕКТ"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Статус согласия -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Статус согласия:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_consent_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❌ Согласие не получено"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_red_dark" />
+
+    </LinearLayout>
+
+    <!-- Кнопка согласия -->
+    <Button
+        android:id="@+id/btn_consent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📋 ПРОЧИТАТЬ И ДАТЬ СОГЛАСИЕ"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Настройки подключения -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🌐 Настройки подключения"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <!-- IP адрес сервера -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IP адрес сервера:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/edit_server_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="192.168.1.100"
+        android:inputType="textNoSuggestions"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Порт сервера -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Порт сервера:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/edit_server_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="8443"
+        android:inputType="number"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Кнопки подключения -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btn_connect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🔗 ПОДКЛЮЧИТЬСЯ"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/btn_disconnect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🔌 ОТКЛЮЧИТЬСЯ"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
+            android:padding="16dp"
+            android:layout_marginStart="8dp"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+    <!-- Статус подключения -->
+    <TextView
+        android:id="@+id/text_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Не подключен"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Предупреждение -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⚠️ Используйте только на собственных устройствах!\n🔒 Соблюдайте законы о приватности!\n📚 Только для образовательных целей!"
+        android:textSize="12sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textAlignment="center"
+        android:background="@android:color/background_light"
+        android:padding="8dp" />
+
+</LinearLayout>

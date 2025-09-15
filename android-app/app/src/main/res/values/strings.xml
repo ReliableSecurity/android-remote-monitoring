@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Remote Monitor</string>
+    <string name="educational_warning">⚠️ ОБРАЗОВАТЕЛЬНЫЙ ПРОЕКТ</string>
+    <string name="consent_required">Для работы приложения требуется согласие</string>
+    <string name="server_settings">Настройки сервера</string>
+    <string name="ip_address">IP адрес</string>
+    <string name="port">Порт</string>
+    <string name="connect">Подключиться</string>
+    <string name="disconnect">Отключиться</string>
+    <string name="status_disconnected">Не подключен</string>
+    <string name="status_connecting">Подключение...</string>
+    <string name="status_connected">Подключен</string>
+</resources>
