@@ -18,6 +18,12 @@ android {
         
         // Образовательный проект
         resValue "string", "educational_notice", "ОБРАЗОВАТЕЛЬНЫЙ ПРОЕКТ - ТОЛЬКО ДЛЯ ИЗУЧЕНИЯ"
+        
+        // Network Configuration через BuildConfig
+        buildConfigField "String", "SERVER_IP", "\"192.168.1.100\""
+        buildConfigField "int", "SERVER_PORT", "8080"
+        buildConfigField "String", "BUILD_TIMESTAMP", "\"${new Date()}\""
+        buildConfigField "boolean", "IS_DEBUG_BUILD", "false"
     }
 
     buildTypes {
@@ -25,11 +31,19 @@ android {
             debuggable true
             applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
+            
+            // Debug specific network config
+            buildConfigField "boolean", "IS_DEBUG_BUILD", "true"
+            buildConfigField "String", "LOG_LEVEL", "\"DEBUG\""
         }
         
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+            // Release specific network config  
+            buildConfigField "boolean", "IS_DEBUG_BUILD", "false"
+            buildConfigField "String", "LOG_LEVEL", "\"INFO\""
         }
     }
     
