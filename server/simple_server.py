@@ -240,21 +240,24 @@ class MonitoringServerHandler(BaseHTTPRequestHandler):
     
     def send_web_interface(self):
         """Отправка простого веб интерфейса"""
-        html = """
+        server_ip = get_local_ip()
+        server_port = get_server_port()
+        
+        html = f"""
 <!DOCTYPE html>
 <html>
 <head>
     <title>Android Remote Monitoring Server</title>
     <meta charset="utf-8">
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
-        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; text-align: center; }
-        .status { background: #e8f5e8; padding: 15px; border-radius: 5px; margin: 20px 0; }
-        .info { background: #e3f2fd; padding: 15px; border-radius: 5px; margin: 20px 0; }
-        .warning { background: #fff3cd; padding: 15px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #ffc107; }
-        pre { background: #f8f9fa; padding: 15px; border-radius: 5px; overflow-x: auto; }
-        .endpoint { font-family: monospace; background: #e9ecef; padding: 5px; border-radius: 3px; }
+        body {{ font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }}
+        .container {{ background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }}
+        h1 {{ color: #2c3e50; text-align: center; }}
+        .status {{ background: #e8f5e8; padding: 15px; border-radius: 5px; margin: 20px 0; }}
+        .info {{ background: #e3f2fd; padding: 15px; border-radius: 5px; margin: 20px 0; }}
+        .warning {{ background: #fff3cd; padding: 15px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #ffc107; }}
+        pre {{ background: #f8f9fa; padding: 15px; border-radius: 5px; overflow-x: auto; }}
+        .endpoint {{ font-family: monospace; background: #e9ecef; padding: 5px; border-radius: 3px; }}
     </style>
 </head>
 <body>
@@ -311,10 +314,7 @@ class MonitoringServerHandler(BaseHTTPRequestHandler):
     </div>
 </body>
 </html>
-        """.format(
-            server_ip=get_local_ip(),
-            server_port=get_server_port()
-        )
+        """
         
         self.send_response(200)
         self.send_header('Content-type', 'text/html; charset=utf-8')

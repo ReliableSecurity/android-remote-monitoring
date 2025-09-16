@@ -144,10 +144,12 @@ $GRADLE_CMD clean
 echo -e "${BLUE}🔨 Сборка APK ($BUILD_TYPE)...${NC}"
 if [ "$BUILD_TYPE" = "debug" ]; then
     $GRADLE_CMD assembleDebug
+    BUILD_RESULT=$?
     APK_PATH="app/build/outputs/apk/debug/app-debug.apk"
     APK_NAME="RemoteMonitoring-${SERVER_IP//\./_}-${SERVER_PORT}-debug.apk"
 else
     $GRADLE_CMD assembleRelease
+    BUILD_RESULT=$?
     APK_PATH="app/build/outputs/apk/release/app-release-unsigned.apk"
     APK_NAME="RemoteMonitoring-${SERVER_IP//\./_}-${SERVER_PORT}-release.apk"
 fi
@@ -156,7 +158,7 @@ fi
 cd ..
 
 # Проверка успешности сборки
-if [ $? -eq 0 ] && [ -f "android-app/$APK_PATH" ]; then
+if [ $BUILD_RESULT -eq 0 ] && [ -f "android-app/$APK_PATH" ]; then
     echo -e "${GREEN}✅ Сборка завершена успешно!${NC}"
     
     # Создание папки для готовых APK
