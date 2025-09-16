@@ -94,7 +94,8 @@ echo -e "  🔧 Тип: ${CYAN}$BUILD_TYPE${NC}"
 echo ""
 
 # Подтверждение
-read -p "$(echo -e ${YELLOW}🚀 Начать сборку APK? (y/n): ${NC})" -n 1 -r
+echo -e "${YELLOW}🚀 Начать сборку APK? (y/n): ${NC}"
+read -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     echo -e "${RED}❌ Сборка отменена${NC}"

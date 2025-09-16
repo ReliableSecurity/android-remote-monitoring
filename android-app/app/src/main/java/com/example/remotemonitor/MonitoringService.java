@@ -74,7 +74,7 @@ public class MonitoringService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (intent != null) {
             serverIP = intent.getStringExtra("server_ip");
-            serverPort = intent.getIntExtra("server_port", 8443);
+            serverPort = intent.getIntExtra("server_port", BuildConfig.SERVER_PORT);
             
             Log.i(TAG, "Запуск сервиса мониторинга: " + serverIP + ":" + serverPort);
             

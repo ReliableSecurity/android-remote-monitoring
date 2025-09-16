@@ -87,16 +87,16 @@ public class MainActivity extends AppCompatActivity {
         textConsentStatus = findViewById(R.id.text_consent_status);
         
         // Начальные значения по умолчанию
-        editServerIP.setText("192.168.1.100");
-        editServerPort.setText("8443");
+        editServerIP.setText(BuildConfig.SERVER_IP);
+        editServerPort.setText(String.valueOf(BuildConfig.SERVER_PORT));
         
         updateUI();
     }
     
     private void loadSettings() {
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        String savedIP = prefs.getString(KEY_SERVER_IP, "192.168.1.100");
-        int savedPort = prefs.getInt(KEY_SERVER_PORT, 8443);
+        String savedIP = prefs.getString(KEY_SERVER_IP, BuildConfig.SERVER_IP);
+        int savedPort = prefs.getInt(KEY_SERVER_PORT, BuildConfig.SERVER_PORT);
         
         editServerIP.setText(savedIP);
         editServerPort.setText(String.valueOf(savedPort));
